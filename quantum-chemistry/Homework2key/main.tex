@@ -1,0 +1,183 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\doublespacing
+\begin{document}
+
+\section*{Homework 2 Key}
+
+\begin{enumerate}%starts the numbering
+
+\item  
+$\forall $ v in $ \mathbb{V}, \, |0\rangle$ is unique
+\\ $|0'\rangle$ is another zero vector
+\\ $|0\rangle = |0\rangle + |0'\rangle =|0'\rangle$ applying the zero identity property of the left term to the left side and applying the zero identity of the right term to the right side.
+Unique because two different vectors but still preserves zero identity.
+\item $\{\psi_1,\psi_2,\psi_3,\psi_4\}$ are orthogonal. Is $\Psi_a = c_1 \psi_1-c_2\psi_2$ and $\Psi_b=c_3\psi_3-c_4\psi_4$ orthogonal?
+\\Yes! Since $\{\psi_1,\psi_2,\psi_3,\psi_4\}$ are orthogonal, the dot product of two $\psi$ terms in the set equals 0. 
+\\ $\Psi_a\cdot\Psi_b=(c_1 \psi_1-c_2\psi_2) \cdot (c_3\psi_3-c_4\psi_4)$
+\\ $\Psi_a\cdot\Psi_b=(c_1 \psi_1*c_3\psi_3 - c_1\psi_1*c_4\psi_4 - c_2\psi_2*c_3\psi_3+c_2\psi_2*c_4\psi_4)$
+\\ $\Psi_a\cdot\Psi_b=0$ because the dot product of two $\psi$ terms equals 0
+\item 
+\begin{enumerate}
+\item
+Yes! a vector space. 
+\\To prove it with these scalar multiplication axioms:
+\\ - The scalar multiple of V by S, or $S\cdot V$ is in $\mathbb V$
+\\ -  $(c+d)V=cV+dV$
+\\ - $c(V_1+V_2)=cV_1+cV_2$
+\\ $\forall~f \in V; S=\mathbb{R}; a,b \in S; f_1,f_2 \in f$
+\\ $(a+b)f = af+bf$
+\\ $(a+b)f''=af''+bf''$ Since a and b are scalar multiple of f'', af'' and bf'' are in vector space. 
+\\ $a(f_1+f_2)=af_1+af_2$
+\\ $a(f''_1+f''_2)=af''_1+af''_2$ Since a are scalar multiple of $f''_1$ and $f''_2$, $af''_1$ and $af''_2$ are in vector space.
+\\ Therefore, any function within set V is a vector space.
+\item Yes! A vector space
+\\ \begin{math}
+    s\left(\begin{pmatrix}
+    a & b & c \\ 
+    0 & d & e \\ 
+    0 & 0 & f \\ 
+    \end{pmatrix} 
+    +\begin{pmatrix}
+    g & h & i \\ 
+    0 & j & k \\ 
+    0 & 0 & l \\ 
+    \end{pmatrix}\right) =
+    \begin{pmatrix}
+    s(a+g) & s(b+g) & s(c+i) \\ 
+    0 & s(d+j) & s(e+k) \\ 
+    0 & 0 & s(f+l)\\ 
+\end{pmatrix}     \end{math}
+\\ \\ a vector space because $M_{3x3}$ and $N_{3x3} \in \mathbb{V}$, $M_{3x3} + N_{3x3}\in \mathbb{V}$, and for every scalar multiple, $s$, of $M_{2x2}\in \mathbb{V}$, $sM_{3x3}\in \mathbb{V}$
+\\ \\
+     \begin{math}
+    (s+s_1)\begin{pmatrix}
+    a & b & c \\ 
+    0 & d & e \\ 
+    0 & 0 & f \\ 
+    \end{pmatrix} =
+    \begin{pmatrix}
+    sa & sb & sc \\ 
+    0 & sd & se \\ 
+    0 & 0 & sf \\ 
+    \end{pmatrix} 
+    +\begin{pmatrix}
+    s_1a & s_1b & s_1c \\ 
+    0 & s_1d & s_1e \\ 
+    0 & 0 & s_1f \\
+    \end{pmatrix}
+    \end{math} Both in vector space. Same logic as above.
+\item Yes! A vector space
+\\ \begin{math}
+    s\left(\begin{pmatrix}
+    a & b \\ 
+    b & d \\ 
+    \end{pmatrix} 
+    +\begin{pmatrix}
+    g & h \\ 
+    h & j \\ 
+    \end{pmatrix}\right) =
+    \begin{pmatrix}
+    s(a+g) & s(b+g) \\ 
+    s(b+g) & s(d+j)\\ 
+
+\end{pmatrix}     \end{math}
+\\ \\ a vector space because $M_{2x2}$ and $N_{2x2} \in \mathbb{V}$, $M_{2x2} + N_{2x2}\in \mathbb{V}$, and for every scalar multiple, $s$, of $M_{2x2}\in \mathbb{V}$, $sM_{2x2}\in \mathbb{V}$
+\\ \\
+     \begin{math}
+    (s+s_1)\begin{pmatrix}
+    a & b \\ 
+    b & d \\ 
+    \end{pmatrix} =
+    \begin{pmatrix}
+    sa & sb\\ 
+    sb & sd \\ 
+
+    \end{pmatrix} 
+    +\begin{pmatrix}
+    s_1a & s_1b  \\ 
+    s_1b & s_1d \\ 
+    \end{pmatrix}
+    \end{math} Both in vector space. Same logic as above.
+
+\end{enumerate}
+3.1 A basis is a set of linearly independent vectors that can be used as building blocks to make any other vector in the vector space. 
+For 3b, the basis can be:
+\begin{pmatrix}
+1 & 0\\0 & 0\\
+\end{pmatrix}
+, 
+\begin{pmatrix}
+0 &1\\1 & 0 \\
+\end{pmatrix}
+, \begin{pmatrix}
+0 &0\\0 & 1 \\
+\end{pmatrix}
+\\
+a\begin{pmatrix}
+1 & 0\\0 & 0\\
+\end{pmatrix}
++ 
+b\begin{pmatrix}
+0 &1\\1 & 0 \\
+\end{pmatrix}
++ c\begin{pmatrix}
+0 &0\\0 & 1 \\
+\end{pmatrix}
+=\begin{pmatrix}
+a &b\\b & c \\
+\end{pmatrix}
+where it is only true if $a=b=c=0$ so it is linear independent
+\item 
+\begin{enumerate}
+\item
+\\ let $|x\rangle = \sum_k x_k|b_k\rangle$
+\\ let $|y\rangle = \sum_k y_k|b_k\rangle $;\quad $\langle y| =\langle b_k|\sum_k y_k$
+\\ $\langle y|x \rangle = \langle b_k|\sum_k y_k^* \sum_k x_k|b_{k'}\rangle$
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \langle b_k|b_{k'}\rangle $
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \cdot \delta_{kk'}$
+\\ $\langle y|x \rangle = \sum_k y_k^* x_k$ one summation is dropped
+\item
+\\ let $|x\rangle = \sum_k x_k|b_k\rangle$
+\\ let $|y\rangle = \sum_k y_k|b_k\rangle $;\quad $\langle y| =\langle b_k|\sum_k y_k$
+\\ $\langle y|x \rangle = \langle b_k|\sum_k y_k^* \sum_k x_k|b_{k'}\rangle$
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \langle b_k|b_{k'}\rangle $
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \cdot 1$
+\\ $\langle y|x \rangle = \sum_k\sum_k y_k^* x_k$ 
+\item
+\\ let $|x\rangle = \sum_k x_k|b_k\rangle$
+\\ let $|y\rangle = \sum_k y_k|b_k\rangle $;\quad $\langle y| =\langle b_k|\sum_k y_k$
+\\ $\langle y|x \rangle = \langle b_k|\sum_k y_k^* \sum_k x_k|b_{k'}\rangle$
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \langle b_k|b_{k'}\rangle $
+\\ $\langle y|x \rangle = \sum_k y_k^* \sum_k x_k \cdot (k+k')$
+\\ $\langle y|x \rangle = (k+k')\sum_k\sum_k y_k^* x_k$ 
+\end{enumerate}
+\item
+\\$f_n(x)=e^{inx}:n\in\mathbb{Z}$
+\\Since problem did not indicate, I am spanning over all real numbers.
+\\ m,n$\in\mathbb{Z}$
+\\$\int_\infty^\infty e^{inx}e^{imx}$
+\\$\int_\infty^\infty e^{ix(n+m)}$
+\\ $2 \int_0^\infty e^{ix(n+m)}$
+\\ $2e^{ix(n+m)}|_0^\infty$
+\\ $2\frac{e^{ix(n+m)}}{i(n+m)}-e^0$
+\\ If orthogonal, then: 
+\\ $2\frac{e^{ix(n+m)}}{i(n+m)}-e^0=0$
+\\ $\frac{e^{ix(n+m)}}{i(n+m)}-1=0$; you want left term to equal 1 to be orthogonal
+\\ only orthogonal when function is defined over the $[0,2\pi]$ interval and m $\neq$ n
+\item $\forall f \in \mathbb{V}$ that spans in [-1,1] interval using Taylor expansions, $f_1,f_2 \in \mathbb{V}$; $a, b \in \mathbb{V}$
+
+Taylor expansion of f(x):
+$f(x)=f(a)+f'(a)\frac{(x-a)}{1!}+f''(a)\frac{(x-a)^2}{2!}+...$
+
+$a(f_1+f_2)(x)=f_1(a)+f'_1(a)\frac{(x-a)}{1!}+f''_1(a)\frac{(x-a)^2}{2!}+...+ f_2(a)+f'_2(a)\frac{(x-a)}{1!}+f''_2(a)\frac{(x-a)^2}{2!}+...$
+\\$(a+b)f(x)=af(a)+af'(a)\frac{(x-a)}{1!}+af''(a)\frac{(x-a)^2}{2!}+...bf(a)+bf'(a)\frac{(x-a)}{1!}+bf''(a)\frac{(x-a)^2}{2!}+...$
+\\in a vector space as using same axioms in Q3
+
+\end{enumerate}%ends the numbering
+
+\end{document}
