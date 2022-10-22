@@ -1,0 +1,182 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{setspace}
+\doublespacing
+\begin{document}
+
+\section*{Homework 0 Key}
+
+\begin{enumerate}%starts the numbering
+
+\item Express the following complex numbers in exponential form:
+
+\begin{enumerate}
+    \item $9(1+i)$
+    \\= $9\sqrt{2}\exp{\left[i\tan^{-1}(1)\right]}$
+    \\=$9\sqrt{2}e^{i\pi/4}$
+    
+    \item $1-i$
+    \\= $\sqrt{2}\exp{\left[i\tan^{-1}(-1)\right]}$
+    \\= $\sqrt{2}e^{-i\pi/4}$
+    
+    \end{enumerate}
+    
+\item Express the following complex numbers in $a+bi$ form:
+    \begin{enumerate}
+    \item $3\exp{\left(\frac{\pi i}{2}\right)}$
+    \\ = $3\left(\cos\frac{\pi}{2}+i\sin(\frac{\pi}{2})\right)$
+    \\ = $3(0+i)$
+    \\ = $3i$
+    
+    \item $\exp{\left(\frac{3\pi i}{2}\right)}$
+    \\ = $\cos\frac{3\pi}{2}+i\sin(3\frac{\pi}{2})$
+    \\ = $0+i(-1)$
+    \\ = $-i$
+    
+    \item $\exp(4\pi)$
+    \\ $=\exp(4\pi)$ because no i 
+    \end{enumerate}
+
+\item Write the complex conjugate of:
+    \begin{enumerate}
+    \item $(1-2i)^\frac{3}{2}+\exp(3+4i)$
+    \\ Conj: $(1+2i)^\frac{3}{2}+\exp(3-4i)$
+    \item $\frac{1}{8\sqrt{\pi}}\left(\frac{1}{a_0}\right)^{\frac{3}{2}}\frac{r}{a_0}\exp\left(-\frac{r}{2a_0}\right)\sin{\theta}\exp(i\phi)$
+    \\Conj: $\frac{1}{8\sqrt{\pi}}\left(\frac{1}{a_0}\right)^{\frac{3}{2}}\frac{r}{a_0}\exp\left(-\frac{r}{2a_0}\right)\sin{\theta}\exp(-i\phi)$
+    \end{enumerate}
+\item Find as many roots as possible for the following equation: $x^5=7$
+\\
+Roots:  $\sqrt[5]{7}$,$\sqrt[5]{7}e^{i2\pi/5}$,$\sqrt[5]{7}e^{i4\pi/5}$,$\sqrt[5]{7}e^{i6\pi/5}$,$\sqrt[5]{7}e^{i8\pi/5}$
+
+\item Calculate the following derivatives:
+    \begin{enumerate}
+    \item $y(x)=x^x , \frac{\mathrm{d}y}{\mathrm{d}x} = ?$
+    \\ $y(x)=e^{x\ln(x)}$; 
+    \quad exponent rule: $a^b = e^{b\ln(a)}$
+    \\ $u=x\ln(x)$
+    \\ $\mathrm{d}u= (x\cdot \frac{1}{x})+(1\cdot \ln x)$
+    \\ $\mathrm{d}u= \ln(x)+1$
+    \\$\frac{\mathrm{d}y}{\mathrm{d}x} =\mathrm{d}u\cdot e^u$
+    \\$\frac{\mathrm{d}y}{\mathrm{d}x} =(\ln x+1)e^{x\ln x} $
+    \\$\frac{\mathrm{d}y}{\mathrm{d}x} =(\ln x+1)x^x $
+    \item $y(x)=\frac{\sin(ax)}{\cos(ax)+2}, \frac{\mathrm{d}y}{\mathrm{d}x} = ?$
+    \\ quotient rule: $\frac{\mathrm{d}y}{\mathrm{d}x} =\frac{f'(x)g(x)-f(x)g'(x)}{g(x)^2}$
+    \\ $\frac{dy}{dx} = \frac{a\cos(ax)\cos((ax)+2)-\left(-a\sin(ax)\sin(ax)\right)}{(\cos(ax)+2)^2}\ $
+    \\ $\frac{dy}{dx} = \frac{a\cos(ax)\cos((ax)+2)+a\sin^2(ax)}{(\cos(ax)+2)^2}\ $
+    \item $y(x,z)=x^z+z^x,\left(\frac{\partial y}{\partial x}\right)_z = ?$
+    \\ treat z as constant; \quad exponent rule: $a^b = e^{b\ln(a)}$
+    \\ $y(x,z)=x^z+e^{xln(z)}$
+    \\ $\left(\frac{\partial y}{\partial x}\right)_z = zx^{z-1}+\ln(z) e^{x\ln(z)}$
+    \\ $\left(\frac{\partial y}{\partial x}\right)_z = zx^{z-1}+\ln(z) z^x$
+    \end{enumerate}
+
+\item Calculate the following integrals:
+    \begin{enumerate}
+    \item $\int x\exp(x)dx$
+    \\ integration by parts: $\int u~dv = uv-\int  v~dx$
+    \\ $u=x$\quad$du=1$\quad $v=\exp(x)$\quad $dv=\exp(x)$
+    \\= $x\exp(x)-\exp(x)+C$
+    \item $\int_{-3}^3 x\exp\left(-\frac{x^2}{2\pi}\right)dx$
+    \\ $u=\frac{-x^2}{2\pi}$
+    \\ $du=-\frac{x}{\pi}dx$
+    \\ $-\pi du=x dx$
+    \\ $\int_{-3}^3 x\exp\left(-\frac{x^2}{2\pi}\right)dx = -\pi\exp\left(-\frac{x^2}{2\pi}\right)|_{-3}^3$
+    \\ $=-\pi\exp\left(-\frac{3^2}{2\pi}\right)-\left(-\pi\exp\left(-\frac{(-3)^2}{2\pi}\right)\right)$
+    \\ $=0$
+    \end{enumerate}
+    
+\item What is the dimension of the vector spaces spanned by the following vectors? In each
+case, propose a minimal orthonormal set of vectors that could span these spaces:
+    \\using dot product
+    \begin{enumerate}
+    \item
+    \begin{math} \begin{pmatrix} -14 \\ 3\\ \end{pmatrix}  ,
+    \begin{pmatrix} $7\\ -1.5$ \end{pmatrix} \end{math}
+    one dimension; first 2x second
+    \begin{math} \begin{pmatrix} \frac{-14\sqrt{205}}{205} \\ \frac{3\sqrt{205}}{205}\\ \end{pmatrix}   \end{math}
+    
+    \item \begin{math} \begin{pmatrix} -14 \\ 3\\ \end{pmatrix} ,
+    \begin{pmatrix} -7\\ -1.5 \end{pmatrix} \end{math}
+    two dimension;linear independent
+    \begin{math} \begin{pmatrix} 1 \\ 0\\ \end{pmatrix} ,
+    \begin{pmatrix} 0\\ 1 \end{pmatrix} \end{math}
+    
+    \item \begin{math} \begin{pmatrix} -14 \\ 3\\ \end{pmatrix},
+    \begin{pmatrix} 7\\ 1.5 \end{pmatrix}
+    \end{math}
+    two dimension;linear independent
+    \begin{math} \begin{pmatrix} 1 \\ 0\\ \end{pmatrix} ,
+    \begin{pmatrix} 0\\ 1 \end{pmatrix} \end{math}
+    
+    \end{enumerate}
+    
+\item Calculate the determinant of the following matrices
+    \begin{enumerate}
+    \item
+    \begin{math}
+    \begin{pmatrix}
+    1 & 2 & 3 \\ 
+    4 & 5 & 6 \\
+    7 & 8 & 9 \\ 
+    \end{pmatrix}
+    = 1 \cdot \begin{pmatrix} 5&6 \\ 8&9 \\ \end{pmatrix} - 2 \cdot \begin{pmatrix} 4&6 \\ 7&9 \\ \end{pmatrix} + 3\cdot\begin{pmatrix} 4&5 \\ 7&8 \\ \end{pmatrix}
+    \end{math}
+    \\$=1\cdot (45-48)-2\cdot (36-42) +3\cdot (32-35)$
+    \\$=-3+12-9$
+    \\$=0$
+    
+    \item
+    \begin{math}
+    \begin{pmatrix}
+    1 & 2 & 3 \\ 
+    8 & 10 & 12 \\
+    7 & 8 & 9 \\ 
+    \end{pmatrix}
+    = 1 \cdot \begin{pmatrix} 10&12 \\ 8&9 \\ \end{pmatrix} - 2 \cdot \begin{pmatrix} 8&12 \\ 7&9 \\ \end{pmatrix} + 3\cdot\begin{pmatrix} 8&10 \\ 7&8 \\ \end{pmatrix}
+    \end{math}
+    \\$=1\cdot (90-96)-2\cdot (72-84) +3\cdot (64-70)$
+    \\$=-6+24-18$
+    \\$=0$
+    
+    \item
+    \begin{math}
+    \begin{pmatrix}
+    1 & 2 & 3 \\ 
+    7 & 8 & 9 \\ 
+    4 & 5 & 6 \\
+    \end{pmatrix}
+    = 1 \cdot \begin{pmatrix} 8&9 \\ 5&6\\ \end{pmatrix} - 2 \cdot \begin{pmatrix} 7&9 \\ 4 & 6\\ \end{pmatrix} + 3\cdot\begin{pmatrix} 7&8 \\ 4&5\\ \end{pmatrix}
+    \end{math}
+    \\$=1\cdot (48-45)-2\cdot (42-36) +3\cdot (35-32)$
+    \\$=3-12+9$
+    \\$=0$
+    \end{enumerate}
+
+\item The function $g(x,y)$ is defined over the circumference of a circle of radius 2 centered in the origin. Calculate the maximum of $g(x,y)$ if:
+    \begin{enumerate}
+    \item $g(x,y)=2x+2y$
+    \\ Use the Lagrangian multipliers, $\nabla f(x,y,z)=\lambda\nabla g(x,y,z)$, where you want to maximaze your value $f(x)$ in a constraint of $g(x)$. In this case, the constraint is defined to be $x^2+y^2=4$, which is the function that encompasses the circumference of a circle with $r=2$. 
+    \\ Your three equations are:
+    \\ $2=\lambda 2x$; \qquad $2=\lamda 2y$;\qquad\qquad $x^2+y^2=4$
+    \\ $\frac{1}{\lambda}=x$; \quad\qquad $\frac{1}{\lambda}=y$; \qquad\qquad $x^2+y^2=4$
+    \\ $\frac{1}{\lambda}^2+\frac{1}{\lambda}^2=4$
+    \\ $\lambda=\pm\frac{1}{\sqrt{2}}$
+    \\plug $\lambda$s into $x^2+y^2=4$, the max coordinate is $(\sqrt{2},\sqrt{2})$
+    \\g(x,y) max is $4\sqrt2$
+
+    \item $g(x,y)=x^2+y^2$
+    \\ Your three equations are:
+    \\ $2x=\lambda 2x$; \qquad\qquad $2y=\lamda 2y$;\qquad\qquad\qquad $x^2+y^2=4$
+    \\ $2x-\lambda 2x=0$; \qquad $2y-\lambda 2y=0$;\qquad\qquad $x^2+y^2=4$
+    \\ $2x(1-\lambda)=0$; \qquad $2y(1-\lambda)=0$;\qquad\qquad $x^2+y^2=4$
+    \\ $x=0~or~\lambda =1$ \qquad $y=0~or~\lambda =1$
+    \\ plug x and y into $x^2+y^2=4$ to get coordinate, cannot do anything about $\lambda$ because it is not in terms of x or y. 
+    \\g(x,y) max is $4$
+    \end{enumerate}
+
+\end{enumerate}%ends the numbering
+
+
+\end{document}
