@@ -1,0 +1,79 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{setspace}
+\doublespacing
+\begin{document}
+
+\section*{Homework 1 Key}
+
+\begin{enumerate}%starts the numbering
+
+\item Let us assume that after a really long day, when it was time to type the final form of his 
+equation explaining the black body radiation, Planck made a few typos. Can you tell in each 
+of the following cases if we can still recover the Rayleigh-Jeans and/or Wien’s laws despite 
+the blunders of a sleepy Planck? 
+\begin{enumerate}
+\item $\frac{8\pi hv^3}{c}\frac{1}{\exp{\frac{hv}{kT}}-2}$
+\\$\lim_{v\rightarrow 0}=\frac{8\pi hv^3}{c^3}\frac{1}{\exp({\frac{hv}{kT}})-2} = -\frac{8\pi hv^3}{c^3} $ 
+\\does not model raleigh jeans, has negative
+
+\\$\lim_{v\rightarrow \infty}=\frac{8\pi hv^3}{c^3}\frac{1}{\exp({\frac{hv}{kT}})-2} =  \frac{8\pi hv^3}{c^3}\frac{1}{{\exp(\frac{hv}{kT}})}$ 
+\\yes, models wien $-2$ is negligible when $lim_{v\rightarrow\infty}$.
+
+\item \\ $\lim_{v\rightarrow 0}=\frac{8\pi hv^4}{c^3}\frac{1}{\exp({\frac{hv^2}{kT}})-1} = \frac{8\pi hv^4}{c^3}\frac{1}{{\frac{hv^2}{kT}}} = \frac{8\pi v^2kT}{c^3}$ 
+\\Do taylor expansion and this models the raleigh jean equation
+
+\\ $\lim_{v\rightarrow \infty}=\frac{8\pi hv^4}{c^3}\frac{1}{\exp{(\frac{hv^2}{kT}})-1} =  \frac{8\pi hv^4}{c^3}\frac{1}{\exp(\frac{hv^2}{kT})} $
+\\does not model wien; -1 is negligible when $lim_{v\rightarrow\infty}$
+\item
+\\ $\lim_{v\rightarrow 0}=\frac{16\pi hv^3}{c^3}\frac{1}{\exp(\frac{2hv}{kT})-1} = \frac{16\pi hv^3}{c^3}\frac{1}{{\frac{2hv}{kT}}} = \frac{8\pi v^2kT}{c^3}$ 
+\\Do taylor expansion and does model raleigh jean
+\\ $\lim_{v\rightarrow \infty}=\frac{16\pi hv^3}{c^3}\frac{1}{\exp{(\frac{2hv}{kT}})-1} =  \frac{16\pi hv^3}{c^3}\frac{1}{\exp({\frac{2hv}{kT}})} $
+\\-1 is negligble when $lim_{v\rightarrow\infty}$ does not model wien
+\end{enumerate}
+
+\item Two students were asked to study the photoelectric effect using the same metal and light 
+source. They ran their experiments separately and got the following results: 
+\\After  checking  these  results  their  advisor  said  that  they  are  both  correct.  Can  you  explain 
+this? Hint: What are “x” and “y” in the previous figures? 
+\\ \\ Left measures frequency and right measures wavelength. right graph is the shape of 1/x
+\item Calculate the De Broglie wavelength of: 
+    \begin{enumerate}
+    \item 1g bullet with velocity 350ms$^{-1}$
+    \\ $\lambda =\frac{h}{mv}$
+    \\ $\lambda = \frac{6.626 \cdot 10^{-34} \frac{kg\cdot m^2}{s^2}\cdot s}{(1 \cdot 10^{-3} kg)(350 m/s)}$
+    \\ $\lambda = 1.893\cdot10^{-33}~m$
+    \item H$_2$ molecule with kinetic energy of (3/2)*kT at T=20 K
+    \\ $\lambda =\frac{h}{p}$
+    \\ $\lambda = \frac{6.626 \cdot 10^{-34} \frac{kg\cdot m^2}{s^2}\cdot s}{p}$
+    \\$K=\frac{1}{2}mv^2=\frac{p^2}{2m}$
+    \\ $p=\sqrt{2mK}=\sqrt{2m(\frac{3}{2}kT)}$  \qquad k is Boltzmann constant
+    \\ $p=\sqrt{2\left(\frac{2.016*10^{-3}kg}{1 mol}\right)\left(\frac{1 mol}{6.022*10^{23} molecule}\right)\frac{3}{2}\cdot1.38*10^-23~m^2~kg~s^{-2}~K^{-1}\cdot20 K}$
+    \\ $p=1.665*10^{-24}kg*m/s$
+    \\substitute to step 2
+    \\ $\lambda = 3.980*10^{-10}~m$
+    \item A chemistry professor (70 kg) running at 150 m/s
+    \\ $\lambda =\frac{h}{mv}$
+    \\ $\lambda = \frac{6.626 \cdot 10^{-34} \frac{kg\cdot m^2}{s^2}\cdot s}{( 70 kg)(150 m/s)}$
+    \\ $\lambda = 6.310\cdot10^{-38}~m$
+    \end{enumerate}
+\item  Which of these expressions are consistent with Heisenberg’s uncertainty principle? Explain your answers.
+\\Correct is C. different setting different directionality
+\\b - cannot measure the both momentum and position exactly
+a- can never be less than one-half of the reduced Planck constant.
+\item $v=\frac{m_eq_e^4}{8\varepsilon_0^2h^3}\left(\frac{1}{n^2}-\frac{1}{m^2}\right)$ 
+\\Suppose that instead of an electron we form an H-like atom with a proton and an
+“electronium”, an hypothetical particle that has the same charge as the electron, but twice its
+mass
+    \begin{enumerate}
+    \item Will all the emission frequencies in the vacuum change due to this change?
+    \\ yes $v$ will be 2x because 2x mass
+    \item Would it be possible to measure the emission lines of this hypothetical atom in some conditions that guarantee that all the lines have the same frequencies they had in the “normal” H atom in the vacuum?
+    \\ not in laboratory
+    \end{enumerate}
+
+\end{enumerate}%ends the numbering
+
+\end{document}
