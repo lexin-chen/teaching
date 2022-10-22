@@ -1,0 +1,95 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\doublespacing
+\begin{document}
+
+\section*{Homework 4 Key}
+ 
+\begin{enumerate}%starts the numbering
+
+\item \begin{proof} $-i\frac{\partial}{\partial x}$ is Hermitian
+\\ $\langle \phi|\hat{p} \psi\rangle = \langle \psi|\hat{p} \phi\rangle^*$
+\\ LHS: $\int \phi^*(-i\hbar\frac{\partial \psi}{\partial x})dx$
+\\ RHS: $\left(\int \psi^*(-i\hbar\frac{\partial \phi}{\partial x})dx\right)^*$
+\\ $\int \psi(i\hbar\frac{\partial \phi^*}{\partial x})dx$
+\\ $i\hbar\int \psi(\frac{\partial \phi^*}{\partial x})dx$
+\\ Using integration by part: $uv-\int uv$
+\\ $\langle \psi|\hat{p} \phi\rangle^*=\phi^*\psi|_{-\infty}^{\infty}-i\hbar\int\phi^*(\frac{\partial \psi}{\partial x})dx$
+\\Because it says wavefunction tend to 0 when x approaches infinity because for wave functions to be normalized, they must approach to 0 when x approaches infinity
+\\ $\langle \psi|\hat{p} \phi\rangle^*=-i\hbar\int\phi^*(\frac{\partial \psi}{\partial x})dx = \int \phi^*(-i\hbar\frac{\partial \psi}{\partial x})dx$
+\\ \therefore LHS = RHS
+\end{proof}
+\item If $[x,p_x]=i\hbar$, calculate:
+    \begin{enumerate}
+    \item $[x+ip_x,x+ip_x]$
+    \\ $=(x+ip_x)(x+ip_x)\psi-(x+ip_x)(x+ipx)\psi$
+    \\ $=\psi(x^2+2ip_x+ip_x^2)-\psi(x^2+2ip_x+ip_x^2)$
+    \\ $=0$
+    \item $[x-p_x,x+p_x]$
+    \\ $=(x-p_x)(x+p_x)\psi-(x+p_x)(x-px)\psi$
+    \\ $=\psi(x^2+xp_x-p_xx-p_x^2)-\psi(x^2+p_xx-xp_x-p_x^2)$
+    \\ $=2xp_x-2px_x$
+    \\ $=2(xp_x-p_xx)$
+    \\ $=2i\hbar$
+    \item $[x^2,p_x]$
+    \\ $=x[x,p_x]+[x,p_x]x$
+    \\ $=x(-i\hbar)+(-i\hbar)x$
+    \\ $=2i\hbar$
+    \end{enumerate}
+\item
+    \begin{enumerate}
+    \item \begin{proof} $[x,p_x^n]=ihnp_x^{n-1}$
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x^{n-1}]p_x$
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x^{n-2}p_x]p_x$ rewriting
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x]p_x^{n-2}p_x+p_x*p_x[x,p_x^{n-2}]$ doing operator identity
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x]p_x^{n-1}+p_x^2[x,p_x^{n-3}p_x]$ rewriting
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x]p_x^{n-1}+p_x^2p_x^{n-3}[x,p_x]+p_x^2p_x[x,p_x^{n-3}]$ identity
+    \\ $=p_x^{n-1}[x,p_x]+[x,p_x]p_x^{n-1}+p_x^{n-1}[x,p_x]+p_x^3[x,p_x^{n-3}]$ rewriting
+    \\ This will carry on until $n-n_1=0$
+    \\ $=(-i\hbar)p_x^{n-1}-i\hbar(n-1)p_x^{n-1}$
+    \\ $=-i\hbar np_x^{n-1}$
+    \\ \end{proof}
+    \item \begin{proof} $[x^n,p_x]=ihnx^{n-1}$
+    \\ $=x^{n-1}[x,p_x]+[x^{n-1},p_x]x$
+    \\ $=x^{n-1}[x,p_x]+[x^{n-2}x,p_x]x$ rewriting
+    \\ $=x^{n-1}[x,p_x]+[x,p_x]x^{n-2}x+x*x[x^{n-2},p_x]$ doing operator identity
+    \\ $=x^{n-1}[x,p_x]+[x,p_x]x^{n-1}+x^2[x^{n-3}x,p_x]$ rewriting
+    \\ $=x^{n-1}[x,p_x]+[x,p_x]x^{n-1}+x^2x^{n-3}[x,p_x]+x^2x[x^{n-3},p_x]$ identity
+    \\ $=x^{n-1}[x,p_x]+[x,p_x]x^{n-1}+x^{n-1}[x,p_x]+x^3[x^{n-3},p_x]$ rewriting
+    \\ This will carry on until $n-n_1=0$
+    \\ $=(-i\hbar)x^{n-1}-i\hbar(n-1)x^{n-1}$
+    \\ $=-i\hbar nx^{n-1}$
+    \\ \end{proof}
+    \item \begin{proof} $[x,F(p_x)]=-\frac{\hbar}{i}\frac{\partial}{\partial p_x}(F(p_x))$
+    \\ turn position operator in momentum operator $\hat{x}=i\hbar\frac{\partial}{\partial p_x}$
+    \\ $=i\hbar(\frac{\partial}{\partial p_x}F(p)\psi) - F(p)\frac{\partial}{\partial p_x}\psi$
+    \\ $=i\hbar(\frac{\partial F(p)}{\partial p_x}\psi + F(p)\frac{\partial \psi}{\partial p_x} -  F(p)\frac{\partial \psi}{\partial p_x})$
+    \\ $=i\hbar\frac{\partial F(p)}{\partial p_x}$
+    \\ \end{proof}
+    \end{enumerate}
+\item \begin{proof} $Tr(A|\psi\rangle\langle\psi|)=\langle\psi|A|\psi\rangle$ if $Tr(A)=\sum_m\langle m|A|m\rangle$
+\\ $Tr(A|\psi\rangle\langle\psi|)= \sum_m\langle m|A|\psi\rangle\langle\psi|m\rangle$
+\\ $Tr(A|\psi\rangle\langle\psi|)= \sum_m\langle \psi|A|m\rangle\langle m|\psi\rangle$ identity operator
+\\ $Tr(A|\psi\rangle\langle\psi|)=\langle\psi|A|\psi\rangle$
+\\ \end{proof}
+\item \begin{proof} $|\psi\rangle$ will be a solution if and only if $\langle \psi|(\hat{H}-E)^2|\psi\rangle=0$
+\\ \Rightarrow
+\\ $\langle \psi|(\hat{H}^2-2\hat{H}E+E^2)|\psi\rangle=0$
+\\ $\hat{H}^2\langle\psi|\psi\rangle-2\hat{H}E\langle\psi|\psi\rangle+E^2\langle\psi|\psi\rangle=0$
+\\ $\hat{H}^2-2\hat{H}E+E^2=0$ because $\hat{H}\psi=E\psi$
+\\ \Leftarrow
+\\ if $\langle \psi|(\hat{H}-E)^2|\psi\rangle=0$ is true then
+\\ $\langle \psi|(\hat{H}-E)(\hat{H}-E)|\psi\rangle=0$ since hermitian, left half = right half
+\\ $(\hat{H}-E)|\psi\rangle=0$
+\\ $\hat{H}|\psi\rangle=E\psi\rangle$
+
+\\ \end{proof}
+\end{enumerate}%ends the numbering
+
+\end{document}
