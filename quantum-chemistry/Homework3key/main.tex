@@ -1,0 +1,91 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\doublespacing
+\begin{document}
+
+\section*{Homework 3 Key}
+ 
+\begin{enumerate}%starts the numbering
+
+\item Which of the following functions are eigenvectors of the operators $\frac{d}{dx}$ and $\frac{d^2}{dx^2}$?
+    \\$\lambda$ is the eigenvalue of the operators.
+    \begin{enumerate}%starts the numbering
+    \item $\exp(ax)$
+    \\$\frac{d}{dx}\exp(ax)=a\exp(ax)=\lambda\exp(ax)$ Yes, an eigenvectors of $\frac{d}{dx}$
+    \\$\frac{d^2}{dx^2}\exp(ax)=a^2\exp(ax)=\lambda\exp(ax)$ Yes, an eigenvectors of $\frac{d^2}{dx^2}$
+    \item $\exp(ax^2)$
+    \\$\frac{d}{dx}\exp(ax^2)=2ax\exp(ax^2)\neq\lambda\exp(ax^2)$ Not an eigenvectors of $\frac{d}{dx}$
+    \\$\frac{d^2}{dx^2}\exp(ax^2)=2a(2ae^{ax^2}x^2+e^{ax^2})\neq\lambda\exp(ax^2)$ Not an eigenvectors of $\frac{d^2}{dx^2}$
+    \item $x$
+    \\$\frac{d}{dx}x=1\neq\lambda x$ Not an eigenvectors of $\frac{d}{dx}$
+    \\$\frac{d^2}{dx^2}x=0\neq\lambda x
+    $ Not an eigenvectors of $\frac{d^2}{dx^2}$
+    \item $x^2$
+    \\$\frac{d}{dx}x^2=2x\neq\lambda x^2$ Not an eigenvectors of $\frac{d}{dx}$
+    \\$\frac{d^2}{dx^2}x^2=2\neq\lambda(x^2)$ Not an eigenvectors of $\frac{d^2}{dx^2}$
+    \item $x^2$
+    \\$\frac{d}{dx}\sin(ax)=a\cos(ax)\neq\lambda\sin(ax) $ Not an eigenvectors of $\frac{d}{dx}$
+    \\$\frac{d^2}{dx^2}\sin(ax)=-a^2\sin(ax)=\lambda\sin(ax)$ Yes, an eigenvectors of $\frac{d^2}{dx^2}$
+    \end{enumerate}%ends the numbering
+
+\item Show that any linear combination of the functions $\exp(i2x)$ and $\exp(-i2x)$ is an eigenfunction of the operator $\frac{d^2}{dx^2}$.
+\begin{proof} $aV_1+bV_2 \in \mathbb{V}; \forall a,b \in \mathbb{C}$
+\\ $\frac{d^2}{dx^2}\Bigl(a\exp(i2x)+b\exp(-i2x)\Bigl)=-4\Bigl(a\exp(i2x)+b\exp(-i2x)\Bigl)$
+\\ So yes, an eigenfunction with eigenvalue of -4.\end{proof}
+
+\item If the operators A and B are Hermitian, will the operator $C=A+iB$ also be Hermitian? Explain.
+\\ $\hat{A}g_i(x)=a_ig_i(x)$
+\\ $\int g_j^*(x)\hat{A}g_i(x)dx=\int g_i(x)\hat{A}^*g_j^*(x)dx$
+\\ $\int g_j^*(x)\hat{B}g_i(x)dx=\int g_i(x)\hat{B}^*g_j^*(x)dx$
+\\ For C to be Hermitian:
+\\ $\int g_j^*(x)(\hat{A}+i\hat{B})g_i(x)dx=\int g_i(x)(\hat{A}+i\hat{B})^*g_j^*(x)dx$
+\\ $\int \hat{A}g_j^*(x)g_i(x)+i\int\hat{B}g_j^*(x)g_i(x)dx=\int \hat{A} g_i(x)g_j^*(x)+i\int\hat{B}^*g_i(x)g_j^*(x)dx$
+\\ C is Hermitian if $\hat{A}+i\hat{B}=\hat{A}-i\hat{B}$.
+
+\item Under which conditions will the function $\exp(-ax^2)$ be an eigenvector of the operator $A=\frac{d^2}{dx^2}-bx^2$.
+\\ $\lambda$ is the eigenvalue of the operators.
+\\ $\left(\frac{d^2}{dx^2}-bx^2\right)(e^{-ax^2})=\lambda(e^{-ax^2})$
+\\ $\frac{d^2}{dx^2}e^{-ax^2}-bx^2e^{ax^2}=\lambda e^{-ax^2}$
+\\ $-2a(-2ae^{-ax^2}x^2+e^{-ax^2})-bx^2e^{-ax^2}=\lambda e^{ax^2}$
+\\ $4a^2x^2e^{-ax^2}-2ae^{-ax^2}-bx^2e^{-ax^2}=\lambda e^{ax^2}$
+\\ $4a^2x^2e^{-ax^2}-2ae^{-ax^2}-4a^2x^2e^{-ax^2}=\lambda e^{ax^2}$ 
+\\ if $b=4a^2$ or $\lambda =-2a$
+
+\item Let $\hat{A}$ be an Hermitian operator, let $\{|a_k\rangle\}$ be the set of its eigenvectors. That is: $\forall k;\hat{A}|a_k\rangle=\lambda_k|a_k\rangle$
+\\ $\forall |a_k'\rangle \in \mathbb{V}$; $ |a_k'\rangle=\sum_k c_k|a_k\rangle$; linear combination of an arbitrary vector in this set 
+\\ $\hat{A}|a_k'\rangle=\sum_k c_k\hat{A}|a_k\rangle$
+\\ $\hat{A}|a_k'\rangle=\sum_k c_k\lambda_k|a_k\rangle$; Applying Hermitian property $\hat{A}|a_k\rangle=\lambda_k|a_k\rangle$
+ \begin{proof}: $\hat{A}=\sum_k\lambda|a_k\rangle\langle a_k|$
+\\ $\hat{A}=\sum_k\lambda|a_k\rangle\langle a_k|$
+\\ $\hat{A}|a_k'\rangle=\sum_k\lambda|a_k\rangle\langle a_k|~|a_k'\rangle$
+\\ $\hat{A}|a_k'\rangle=\sum_k\lambda|a_k\rangle\langle a_k|\sum_k c_k|a_k\rangle$
+\\ $\hat{A}|a_k'\rangle=\sum_k\lambda c_k|a_k\rangle$; Applying identity operator and this is equal to line 3 so \end{proof} 
+
+\item Let $\hat{A}$ be an operator such that $\hat{A^2}=\hat{A}$. Proof eigenvalues are only 0 and 1.
+\\ $\lambda$ is eigenvalue of the operators.
+\\ $\hat{A}v=\lambda v$
+\\ $\hat{A^2}v=\hat{A}(\lambda v)=\lambda^2 v$
+\\ $\lambda=\lambda^2$; \quad $\lambda$ can only be 0 or 1.
+
+\item Let $\hat{A},\hat{B},\hat{C}$  be three arbitrary operators. Proof that:
+\begin{proof}$[\hat{A},[\hat{B},\hat{C}]] + [\hat{B},[\hat{C},\hat{A}]] + [\hat{C},[\hat{A},\hat{B}]] = 0$
+\\ $\hat{A}(\hat{B}\hat{C}-\hat{C}\hat{B})-(\hat{B}\hat{C}-\hat{C}\hat{B})\hat{A}+ \hat{B}(\hat{C}\hat{A}-\hat{A}\hat{C})-(\hat{C}\hat{A}-\hat{A}\hat{C})\hat{B}+
+\hat{C}(\hat{A}\hat{B}-\hat{B}\hat{A})-(\hat{A}\hat{B}-\hat{B}\hat{A})\hat{C}=0$
+
+\\ $\hat{A}\hat{B}\hat{C}-\hat{A}\hat{C}\hat{B}-\hat{B}\hat{C}\hat{A}+\hat{C}\hat{B}\hat{A}+\hat{B}\hat{C}\hat{A}-\hat{B}\hat{A}\hat{C}-\hat{C}\hat{A}\hat{B}+\hat{A}\hat{C}\hat{B}+\hat{C}\hat{A}\hat{B}-\hat{C}\hat{B}\hat{A}-\hat{A}\hat{B}\hat{C}+\hat{B}\hat{A}\hat{C}=0$ \end{proof}
+
+\item Optional: Let $\hat{A},\hat{B}$ be two arbitrary operators, and let $\{|m\rangle\}$ be an arbitrary orthonormal basis. 
+\begin{proof} $\sum_m \langle m|\hat{A}\hat{B}|m\rangle=\sum_m \langle m|\hat{B}\hat{A}|m\rangle$
+\\ $\exists~m, m' \in \{|m\rangle\}$
+\\ $\sum_{mm'} \langle m|\hat{A}|m'\rangle\langle m'|\hat{B}|m\rangle$; inserting identity operator
+\\ $\sum_{mm'} \langle m'|\hat{B}|m\rangle\langle m|\hat{A}|m'\rangle$; flipping the order
+\\ $\sum_{m'} \langle m'|\hat{B}\hat{A}|m'\rangle$; simplify because identity operator \end{proof}
+\end{enumerate}%ends the numbering
+
+\end{document}
