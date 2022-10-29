@@ -1,0 +1,140 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath,bm}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+\doublespacing
+\begin{document}
+
+\section*{Homework 7 Key}
+ 
+\begin{enumerate}%starts the numbering
+    \item Calculate the average value of operators $x^2$ and $p_x^2$.
+    \\ $x=\sqrt{\frac{\hbar}{2m\omega}}(b+b^\dagger)$
+    \\ $\langle x\rangle=\langle\psi_n|\sqrt{\frac{\hbar}{2m\omega}}(b+b^\dagger)|\psi_n\rangle$
+    \\ $\langle x\rangle=\sqrt{\frac{\hbar}{2m\omega}}\langle\psi_n|(b+b^\dagger)|\psi_n\rangle$
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}\langle\psi_n|(b^2+bb^\dagger+b^\dagger b+b^\dagger^2)|\psi_n\rangle$
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}\Big(\langle\psi_n|b^2|\psi_n\rangle +\langle\psi_n|bb^\dagger|\psi_n\rangle +\langle\psi_n|b^\dagger b|\psi_n\rangle+\langle\psi_n|b^\dagger^2|\psi_n\rangle\Big)$
+    \\ $\langle\psi_n|b^2|\psi_n\rangle$ and $\langle\psi_n|b^\dagger^2|\psi_n\rangle$ equals 0 because the wavefunctions at different eigenstate are orthogonal hence a inner product of 0.
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}\Big(\langle\psi_n|bb^\dagger|\psi_n\rangle +\langle\psi_n|b^\dagger b|\psi_n\rangle\Big)$
+    \\ $bb^\dagger = b^\dagger b +1$ based on its commutator relations, so
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}\Big(\langle\psi_n|N+1|\psi_n\rangle +\langle\psi_n|N|\psi_n\rangle\Big)$
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}\langle\psi_n|2N+1|\psi_n\rangle$
+    \\ $\langle x^2\rangle=\frac{\hbar}{2m\omega}(2N+1)$
+    \\ $\langle x^2\rangle=\frac{\hbar}{m\omega}(N+\frac{1}{2})$
+    \\
+    \\ $p=-i\sqrt{\frac{m\omega\hbar}{2}}(b-b^\dagger)$
+    \\ $\langle p^2\rangle = -\frac{m\omega\hbar}{2}\langle\psi_n|(b^2-bb^\dagger-b^\dagger b+b^\dagger^2)|\psi_n\rangle$
+    \\ $\langle p^2\rangle=-\frac{m\omega\hbar}{2}\Big(\langle\psi_n|b^2|\psi_n\rangle -\langle\psi_n|bb^\dagger|\psi_n\rangle -\langle\psi_n|b^\dagger b|\psi_n\rangle+\langle\psi_n|b^\dagger^2|\psi_n\rangle\Big)$
+    \\ $\langle\psi_n|b^2|\psi_n\rangle$ and $\langle\psi_n|b^\dagger^2|\psi_n\rangle$ equals 0 because the wavefunctions at different eigenstate are orthogonal hence a inner product of 0.
+    \\ $\langle p^2\rangle=-\frac{m\omega\hbar}{2}\Big(-\langle\psi_n|bb^\dagger|\psi_n\rangle -\langle\psi_n|b^\dagger b|\psi_n\rangle\Big)$
+    \\ $bb^\dagger = b^\dagger b +1$ based on its commutator relations, so
+    \\ $\langle p^2\rangle=\frac{m\omega\hbar}{2}\Big(\langle\psi_n|N+1|\psi_n\rangle +\langle\psi_n|N|\psi_n\rangle\Big)$
+    \\ $\langle p^2\rangle=\frac{m\omega\hbar}{2}(2N+1)$
+    \\ $\langle p^2\rangle=(m\omega\hbar)(N+\frac{1}{2})$ 
+    \begin{enumerate}
+    \item Calculate product of $\Delta x\Delta p$ for this state. 
+    \\ $\Delta x\Delta p=\sqrt{\langle x^2\rangle-\langle x\rangle^2} \sqrt{ \langle p^2\rangle-\langle p\rangle^2}$
+    \\ $\langle x^2\rangle=\frac{\hbar}{m\omega}(N+\frac{1}{2})$
+    \\ $\langle x \rangle=0$ because odd function hence symmetry.
+    \\ $\langle p^2\rangle=(m\omega\hbar)(N+\frac{1}{2})$ 
+    \\ $\langle p \rangle=0$ because odd function hence symmetry.
+    \\ $\Delta x\Delta p= \sqrt{\frac{\hbar}{m\omega}(N+\frac{1}{2})} \sqrt{(m\omega\hbar)(N+\frac{1}{2})}$
+    \\ $\Delta x\Delta p= \hbar(N+\frac{1}{2})$
+    \\ Recall the Heisenberg's uncertainty principle: $\Delta x\Delta p \ge \frac{\hbar}{2}$
+    \\ $\hbar(N+\frac{1}{2}) \ge \frac{\hbar}{2}$; unless $N=0$ or ground state. 
+    \end{enumerate}
+\item A: 1,3,5-hexatriene (all trans isomer) and B: benzene. C-C bond length ($l=0.14nm$). A is 1D box with total length $L=6l$, B is circle with perimeter $L=6l$. 
+    \begin{enumerate}
+    \item Each system has 6 $\pi$ electron, calculate the energy difference between $\pi$ electrons in system A and B.
+    \\ \underline{System A}: 6 $\pi$ electron, 2 $\pi$ electrons occupy each energy level, so 2 on n=1, 2 on n=2, and 2 on n=3.
+    \\ $E=\frac{n^2h^2}{ml^2}$
+    \\ $E=2*\frac{9h^2}{ml^2}+2*\frac{4h^2}{ml^2}+2*\frac{h^2}{ml^2}$
+    \\ Substitute with $h=6.626*10^{34}$, $m=9.109 × 10^{-31}$, $l=6*0.14*10^{-9}$
+    \\ $E = 2.39*10^{-18}J$
+    
+    \\ \underline{System B}: Degeneracy of 2 at every excited state $m_j=-1,1$
+    \\ $E=\frac{m_j^2\hbar^2}{2I}$, $I=m(\frac{6l}{2\pi})^2$
+    \\ $E=4*\frac{\frac{h}{2\pi}}{m(\frac{6l}{2\pi})^2}$
+    \\ Substitute with $h=6.626*10^{34}$, $m=9.109 × 10^{-31}$, $l=6*0.14*10^{-9}$
+    \\ $E= 1.37*10^{-18} J$
+    \\ $\Delta E= 1.02*10^{-18} J$
+    \item It could be used to predict aromatic stability because we predicted higher stability/lower energy in benzene system, which makes sense. 
+    \item Some limitations include but not limited to: 1) these are 3D molecules that are approximated into 1D particle in a box or 2D rigid rotor. 2) Electron attraction/repulsion are not accounted for. 3) A fixed radius, which is fine for an approximation because very small fluctuations based on my knowledge. 
+    \item The aromaticity rule that is supported by the 2D rigid rotor is the Huckel's rule that a cyclic molecule is aromatic if it has $4n+2$ $\pi$ electrons.
+    \end{enumerate}
+\item 
+    \begin{enumerate}
+    \item $[b^\dagger b, b]= b^\dagger bb-bb^\dagger b=(b^\dagger b-bb^\dagger )b$
+    \\ $bb^\dagger=b^\dagger b+1$
+    \\ $(b^\dagger b-bb^\dagger )b=(-1)b=-b$
+    \item $[b^\dagger b, b^\dagger]= b^\dagger bb^\dagger-b^\dagger b^\dagger b=b^\dagger(bb^\dagger-b^\dagger b)=b^\dagger(1)=b^\dagger$
+    \item $[b^\dagger b, bb^\dagger]$= $[N, N+1]=N(N+1)-(N+1)N=0$
+    \end{enumerate}
+\item $\forall n=0,1,2,...,$ $|n\rangle$ represent state s.t. $b^\dagger b|n\rangle=n|n\rangle$; $\langle n|n\rangle=1$
+\\ $b^\dagger|n\rangle=\sqrt{n+1}|n+1\rangle$; $b|n\rangle=\sqrt{n}|n-1\rangle$ 
+    \begin{enumerate}
+        \item $\langle n|b^\dagger bbbb b^\dagger|n+2 \rangle, n=11$
+        \\ $\langle 11|b^\dagger bbbb b^\dagger|13 \rangle$
+        \\ $\sqrt{14}\langle 11|b^\dagger bbbb |14 \rangle$
+        \\ $\sqrt{14}\sqrt{14}\langle 11|b^\dagger bbb |13 \rangle$
+        \\ $\sqrt{13}\sqrt{14}\sqrt{14}\langle 11|b^\dagger bb |12 \rangle$
+        \\ $\sqrt{12}\sqrt{13}\sqrt{14}\sqrt{14}\langle 11|b^\dagger b |11 \rangle$
+        \\ $\sqrt{12}\sqrt{13}\sqrt{14}\sqrt{14}\langle 11|11 |11 \rangle$
+        \\ $11*14\sqrt{12}\sqrt{13}$
+        \\ $154\sqrt{156}$
+        \item $\langle n|b^\dagger bbbb b^\dagger|n+2 \rangle, n=1$
+        \\ $\langle 1|b^\dagger bbbb b^\dagger|3 \rangle$
+        \\ $\sqrt{4}\langle 11|b^\dagger bbbb |4 \rangle$
+        \\ $\sqrt{4}\sqrt{4}\langle 1|b^\dagger bbb |3 \rangle$
+        \\ $\sqrt{3}\sqrt{4}\sqrt{4}\langle 1|b^\dagger bb |2 \rangle$
+        \\ $\sqrt{2}\sqrt{3}\sqrt{4}\sqrt{4}\langle 1|b^\dagger b |1 \rangle$
+        \\ $\sqrt{2}\sqrt{3}\sqrt{4}\sqrt{4}\langle 1|1 |1 \rangle$
+        \\ $1*4\sqrt{2}\sqrt{3}$
+        \\ $=4\sqrt{6}$
+        \item $\langle n|\hat{p^3}|n \rangle =0$ 
+        \\ $\langle n|n\rangle$ even, $\hat{p^3}$ odd. even * odd = odd, symmetry.
+        \item $\langle n|\hat{p^3}|n+1 \rangle, n=13 $ 
+        \\ Recall $\langle p^2\rangle = -\frac{m\omega\hbar}{2}\langle\psi_n|(b^2-bb^\dagger-b^\dagger b+b^\dagger^2)|\psi_n\rangle$ from #1
+        \\ $\langle n|\hat{p^3}|n+1 \rangle = (-i)^3(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|(b^2-bb^\dagger-b^\dagger b+b^\dagger^2)(b-b^\dagger)|n+1\rangle$
+        \\ $= i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|(b^3-bb^\dagger b-b^\dagger bb+b^\dagger^2b- bbb^\dagger+bb^\dagger b^\dagger+b^\dagger bb^\dagger-b^\dagger^3)|n+1\rangle$
+        \\ only terms with one rising and two lowering operator will lead to $\langle n|n\rangle$ because $(n+1)+1-1-1=n$. All others that does not lead to this, $\langle n|n\rangle$, will have inner product of 0.
+        \\ $= i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|(-bb^\dagger b-b^\dagger bb- bbb^\dagger)|n+1\rangle$
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|(bb^\dagger b+b^\dagger bb+ bbb^\dagger)|n+1\rangle$
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\Big(\langle n|(bb^\dagger b|n+1\rangle + \langle n|(b^\dagger bb|n+1\rangle + \langle n|(bbb^\dagger|n+1\rangle\Big)$
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\Big(\sqrt{14}\langle 13|bb^\dagger |13\rangle + \sqrt 14\langle 13|b^\dagger b|13\rangle + \sqrt{15}\sqrt{14}\langle 13|bb|15\rangle\Big)$
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\Big(14\sqrt{14}\langle 13|13\rangle + 13\sqrt 14\langle 13|13\rangle + \sqrt{15}\sqrt{15}\sqrt{14}\langle 13|b|14\rangle\Big)$
+         \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\Big(14\sqrt{14}\langle 13|13\rangle + 13\sqrt 14\langle 13|13\rangle + 15\sqrt{14}\langle 13|13\rangle\Big)$
+         \\ $ = -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}*42\sqrt{14}$
+
+        \item $\langle n|\hat{p^3}|n-3 \rangle, n=13 $ 
+
+
+        \\ $= i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|(b^3-bb^\dagger b-b^\dagger bb+b^\dagger^2b- bbb^\dagger+bb^\dagger b^\dagger+b^\dagger bb^\dagger-b^\dagger^3)|n-3\rangle$
+        \\ only terms with 3 rising will lead to $\langle n|n\rangle$ because $(n-3)+1+1+1=n$. All others that does not lead to this, $\langle n|n\rangle$, will have inner product of 0.         
+        \\ $= i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\langle n|-b^\dagger^3|n-3\rangle$
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\sqrt{11}\langle 13|b^\dagger^2|11\rangle$   
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\sqrt{11}\sqrt{12}\langle 13|b^\dagger|12\rangle$  
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\sqrt{11}\sqrt{12}\sqrt{13}\langle 13|13\rangle$   
+        \\ $= -i(\frac{m\omega\hbar}{2})^{\frac{3}{2}}\sqrt{1706}$
+    \end{enumerate}
+\item Take $\psi^2$, you have $e^{something}$ are opposite signs so e part becomes 1, because $m_j$ consists of both positive and its negative counterparts. You get that it doesn't depend on $\phi$, but instead $\theta$.
+
+\end{enumerate}%ends the numbering
+
+\end{document}
