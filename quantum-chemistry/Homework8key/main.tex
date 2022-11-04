@@ -1,0 +1,129 @@
+%This is a LaTeX template for homework assignments
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath,bm}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+\doublespacing
+\usepackage[dvipsnames]{xcolor}
+\begin{document}
+
+\section*{Homework 8 Key}
+ 
+\begin{enumerate}%starts the numbering
+\item 
+    \begin{enumerate}
+    \item \begin{proof} $[L_y,L_z]=i\hbar L_x$
+    \ The p7 slide 4
+    \end{proof}
+    \item \begin{proof} $[L_z,L_x]=i\hbar L_y$
+    \ The p7 slide 4
+    \end{proof}
+    \item \begin{proof} $[L^2,L_x]=[L^2,L_y]=0$
+    \ The p7 slide 5
+    \end{proof}
+    \end{enumerate}
+\item Calculate and Simplify
+    \begin{enumerate}
+        \item $[L_+^2,L_z]$ ; Recall $[L_z,L_+]=\hbar L_+$
+        \\ $= L_+^2L_z-L_zL_+^2$
+        \\ $= L_+^2L_z-L_zL_+^2$\textcolor{cyan}{$-L_+L_zL_++L_+L_zL_+$}
+        \\ $= L_+[L_+,L_z] + [L_+,L_z]L_+$
+        \\ $= -\hbar L_+^2+(-\hbar L_+^2)$
+        \\ $=-2\hbar L_+^2$
+        \item $[L_+^2,L_-^2]$; Recall $[L_+,L_-]=2\hbar L_z$
+        \\ use the commutator property $[AB,CD]=[AB,C]D+C[AB,D]$
+        \\ $= A[B,C]D+[A,C]BD+CA[B,D]+C[A,D]B$
+        \\ $=L_+[L_+,L_-]L_-+[L_+,L_-]L_+L_-+L_-L_+[L_+L_-]+L_-[L_+,L_-]L_+$
+        \\ $=L_+(2\hbar L_z)L_-+(2\hbar L_z)L_+L_-+L_-L_+(2\hbar L_z)+L_-(2\hbar L_z)L_+$
+        \\ $= 2\hbar L_z(L_+L_zL_-+L_zL_+L_-+L_-L_++L_-L_zL_+)$
+        \item $[L^2,L_+^2+L_-^2+L_z^2]$
+        \\ $= L^2L_+^2+L^2L_-^2+L^2L_z^2-L_+^2L^2-L_-^2L^2-L_z^2L^2$
+        \\ $L^2$ commute with $L_+,L_-,L_z$ it commutes with the squares because the commutator property $[A,BC]=[A,B]C+B[A,C]$
+    \end{enumerate}
+\item Is it possible to linearly combine wavefunctions for 3rd and 4th excited state of a particle on a sphere:
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{ |c|c| } 
+    \hline
+    $\bm{n}$ & $\bm{m}$ \\
+    \hline
+    4 &  -3,-2,-1,0,1,2,3\\
+    \hline
+     5 &  -4,-3,-2,-1,0,1,2,3,4\\
+    \hline
+    \end{tabular}
+    \caption{3rd and 4th excited state correspond to n=4 and n=5. The table lists all the possible values of possible $l,m_l$.}
+    \label{tab:my_label}
+\end{table}
+    \begin{enumerate}
+        \item $L_z$ has precise value of $-2\hbar$
+        \\ $L_z\psi(x)=m\hbar\psi(x)$
+        \\ $\psi_{4,3,-2}$ has an $L_z$ eigenvalue of $-2$.
+        \item $L_z$ has average value of $7\hbar$
+        \\ The largest $m$ go up to 4 and you need numbers above 7 to get an average of $7\hbar$.
+        \item $L_z$ has average value of $1.4\hbar$
+        \\ Because the average is 1.4, it will consist of $m=1,2$, and we will find the probability of the wavefunctions at those states. 
+        \\ $p_1(\hbar)+p_2(2\hbar)=1.4\hbar$; p is probability
+        \\ We will try out some numbers of $p_1,p_2$ to get 1.4 and voila, the solutions are $p_1=3/5,p_2=2/5$. This is not super elegant but it works.
+        \\ $p_1=\frac{c_1^2}{c_1^2+c_2^2}=3/5$ and $p_2=\frac{c_2^2}{c_1^2+c_2^2}=2/5$; \ Postulates of quantum mechanics.
+        \\ $\frac{p_1}{p_2}=\frac{3}{2}=\frac{c_1^2}{c_2^2}$
+        \\ $c_1=\sqrt{3}$ and $c_2=\sqrt{2}$
+        \\ $\psi=\sqrt{3}\psi_{4,3,1}+\sqrt{2}\psi_{4,3,2}$; for simplicity, the two $\psi$ are $\psi_1,\psi_2$
+        \\ To normalize: $\psi=N\left(\sqrt{3}\psi_1+\sqrt{2}\psi_2\right)$
+        \\ $\langle \psi|\psi\rangle=1$
+        \\ $N^2\Big\langle \sqrt{3}\psi_1+\sqrt{2}\psi_2\Big|\sqrt{3}\psi_1+\sqrt{2}\psi_{2}\Big\rangle=1$ and $\langle \psi_1|\psi_1\rangle=1$ and $\langle\psi_1|\psi_2\rangle=0$ because they are orthogonal.
+        \\ $N^2(3+2)=1$
+        \\ $N=\frac{1}{\sqrt{5}}$
+        \\ Finally, $\psi=\frac{1}{\sqrt{5}}\left(\sqrt{3}\psi_{4,3,1}+\sqrt{2}\psi_{4,3,2}\right)$ is the normalized form.
+    \end{enumerate}
+\item \begin{proof} $2p_x,2p_y$ are mutually orthogonal.
+\\ The integral $\int_0^{2\pi} 2p_x*2p_yd\tau$ has the factor $\int_0^{2\pi}\cos{\phi}\sin{\phi}d\phi=\frac{1}{2}\sin^2\phi\Big|_0^{2\pi}=0.$
+\end{proof}
+
+\item Derive an equation that yields probability of finding electron within distance "d" from nucleus:
+\\ $P(r)=\int_0^d dr \int_0^\pi d\theta\sin\theta\int_0^{2\pi}d\phi r^2\psi^*_{n,l,m_l}(r,\theta,\phi)\psi_{n,l,m_l} (r,\theta,\phi)$
+\\ $P(r)=\int_0^d dr \int_0^\pi d\theta\sin\theta\int_0^{2\pi}d\phi r^2R_{n,l}^*(r)Y^*_{l,m_l}(\theta,\phi) R_{n,l}(r)Y_{l,m_l} (\theta,\phi)$
+\\ $\int_0^\pi d\theta\sin\theta\int_0^{2\pi}d\phi Y^*_{l_1,m_{l1}}(\theta,\phi)Y_{l_2,m_{l2}}(\theta,\phi)=\delta_{l_1l_2}\delta_{m_{l1}m_{l2}}$
+\\ $P(r)=\int_0^dR^2_{n,l}(r')r'^2dr'$
+\item Calculate $\langle r\rangle$ for an electron in 2s. Compare with radial probability.
+\\ $\psi_{2s}=\frac{1}{4\sqrt{2\pi}}\left(\frac{1}{a_0}\right)^{3/2}\left(2-\frac{r}{a_0}e^\frac{-r}{a_0}\right)$
+\\ $\langle r\rangle = \int\int\int \psi^**r*\psi~dxdydz$
+\\ $\langle r\rangle = \int_0^{2\pi}\int_0^\pi\int_0^\infty\psi^**r*\psi*r^2dr\sin\theta d\theta d\phi$ 
+\\ $\langle r\rangle =\frac{1}{4\sqrt{2\pi}}\left(\frac{1}{a_0}\right)^3\frac{1}{4\sqrt{2\pi}}\int_0^{2\pi}\int_0^\pi\int_0^\infty[(2-\frac{r}{a_0})e^{\frac{-r}{a_0}}]^2r^3dr$
+\\ $= \frac{1}{32\pi}\left(\frac{1}{a_0}\right)^3\int_0^{2\pi}\int_0^\pi\int_0^\infty\left(4e^{\frac{-r}{a_0}}-\frac{4r}{a_0}e^{\frac{-r}{a_0}}+\left(\frac{r}{a_0}\right)^2e^{\frac{-r}{a_0}}\right)r^3dr\sin\theta d\theta d\phi$
+\\ $\int_0^{2\pi}\int_0^\pi\sin\theta d\theta d\phi =4\pi$
+\\ $= \frac{4\pi}{32\pi}\left(\frac{1}{a_0}\right)^3\int_0^\infty\left(4e^{\frac{-r}{a_0}}-\frac{4r}{a_0}e^{\frac{-r}{a_0}}+\left(\frac{r}{a_0}\right)^2e^{\frac{-r}{a_0}}\right)r^3dr$
+\\ The rest is just integration by parts so I resorted to Wolfram.
+\\ $r=6a_0$
+\\ For maximum of radial probability, set derivative of probability density to equal 0.
+\\ $\frac{d}{dr}\int R_{2,0}^2(r)^2dr=0$;ignore all constants
+\\ $\frac{d}{dr}r^2e^\frac{-r}{a_0}=0$
+\\ $2re^\frac{-r}{a_0}-\frac{r^2}{a_0}e^\frac{-r}{a_0}=0$
+\\ $e^\frac{-r}{a_0}(2r-\frac{r^2}{a_0})=0$
+\\ $r=2a_0$ expectation value 3x max radial probability.
+\item An electron is more likely to be $2$\AA~if it is in 1s or 2s orbital?
+\\ $\langle \psi_{1s}|\psi_{1s}\rangle = \frac{1}{\pi}\left(\frac{1}{a_0}\right)^3e^\frac{-2r}{a_0}$
+\\ $\langle \psi_{1s}|\psi_{1s}\rangle = \frac{1}{\pi}\left(\frac{1}{a_0}\right)^3e^\frac{-2(2*10^{-10})}{52.9*10^{-12}}$
+\\
+\\ $\langle \psi_{2s}|\psi_{2s}\rangle =  \frac{1}{32\pi}\left(\frac{1}{a_0}\right)^3(2-\frac{r}{a_0})^2e^\frac{-2r}{a_0}$
+
+\\ The probability of $2s > 1s$, also because 2s radius is greater than 1s and closer to 2\AA. 
+
+\end{enumerate}%ends the numbering
+
+\end{document}
