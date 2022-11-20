@@ -1,0 +1,97 @@
+%This is a LaTeX template for homework assignments
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{setspace}
+\usepackage{amssymb}
+\usepackage{amsmath,bm}
+\usepackage{amsthm}
+\usepackage{bigints}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+\urlstyle{same}
+\doublespacing
+\usepackage[dvipsnames]{xcolor}
+
+\begin{document}
+
+\section*{Homework 10 Key}
+\begin{enumerate}%starts the numbering
+\item Find the ground state energy of the 1D harmonic oscillator using the variational method
+for each of the following test wavefunctions:
+    \begin{enumerate}
+        \item $\psi=e^{-ax^2}$
+        \\ Since it is not normalized, we need to use $\cfrac{\int\psi^*\hat{H}\psi d\tau}{\int\psi^*\psi d\tau}\ge E_1$
+        \\ Recall:
+        \\ $\nu=\frac{1}{2\pi}\sqrt{\frac{k}{m}}$,
+        \\ $V=\frac{1}{2}kx^2$, 
+        \ $V=2\pi^2\nu^2mx^2$
+        \\ $\hat{H}=\hat{T}+\hat{V}$,
+        \ $\hat{T}=-\cfrac{\hbar^2}{2m}\cfrac{d^2}{dx^2}$,
+        \ $\hat{V}=2\pi^2\nu^2mx^2$
+        \\
+        \\ $\int\psi^*\hat{H}\psi d\tau=\int\psi^*\hat{T}\psi d\tau+\int\psi^*\hat{V}\psi d\tau$
+        \\ $=-\cfrac{\hbar^2}{2m}\bigintsss_{-\infty}^\infty e^{-ax^2}\cfrac{d^2e^{-ax^2}}{dx^2}dx +2\pi^2 \nu^2m\bigintsss_{-\infty}^\infty x^2e^{-2ax^2}dx$
+        \\ $=-\cfrac{\hbar^2}{2m}\bigintsss_{-\infty}^\infty e^{-ax^2}\cdot (-2ae^{-ae^2}+4a^2x^2e^{-ax^2})dx +2\pi^2 \nu^2m\bigintsss_{-\infty}^\infty x^2e^{-2ax^2}dx$
+        \\ $=-\cfrac{2\hbar^2}{2m}\bigintsss_{0}^\infty (-ae^{-2ax^2}+2a^2x^2e^{-2ax^2})dx +4\pi ^2 \nu^2m\bigintsss_{0}^\infty x^2e^{-2ax^2}dx$
+        \\ $=\cfrac{\hbar^2a\pi^\frac{1}{2}}{m(2a)^\frac{1}{2}}-\cfrac{4a^2\hbar^2\pi^\frac{1}{2}}{4m(2a)^\frac{3}{2}}+\cfrac{4\pi^2\nu^2m\pi^\frac{1}{2}}{4
+        (2a)^\frac{3}{2}}$
+        \\ $=\cfrac{\hbar^2a^\frac{1}{2}\pi^\frac{1}{2}}{2^\frac{1}{2}m}-\cfrac{a^\frac{1}{2}\hbar^2\pi^\frac{1}{2}}{2^\frac{3}{2}m}+\cfrac{\pi^\frac{5}{2}\nu^2m}{8^\frac{1}{2}a^\frac{3}{2}}$
+        \\ $=\cfrac{\hbar^2a^\frac{1}{2}\pi^\frac{1}{2}}{2^\frac{3}{2}m}+\cfrac{\pi^\frac{5}{2}\nu^2m}{2^\frac{3}{2}a^\frac{3}{2}}$
+        \\
+        \\ $\int\psi^*\psi d\tau=\bigintsss_{-\infty}^\infty e^{-ax^2}dx=2\bigintsss_{0}^\infty e^{-2ax^2}=\cfrac{\pi^\frac{1}{2}}{2^\frac{1}{2}a^\frac{1}{2}}$
+        \\
+        \\$\cfrac{\int\psi^*\hat{H}\psi d\tau}{\int\psi^*\psi d\tau}= \cfrac{\hbar^2a^\frac{1}{2}\pi^\frac{1}{2}}{2^\frac{3}{2}m}\cdot\cfrac{2^\frac{1}{2}a^\frac{1}{2}}{\pi^\frac{1}{2}}+\cfrac{\pi^\frac{5}{2}\nu^2m}{2^\frac{3}{2}a^\frac{3}{2}}\cdot\cfrac{2^\frac{1}{2}a^\frac{1}{2}}{\pi^\frac{1}{2}}$
+        \\$\cfrac{\int\psi^*\hat{H}\psi d\tau}{\int\psi^*\psi d\tau}=\cfrac{a\hbar^2}{2m}+\cfrac{\pi^2\nu^2m}{2a}$
+        \\ $\cfrac{\hbar^2}{2m}-\cfrac{\pi^2\nu^2m}{2a^2}=0$ 
+        \\ $a=\cfrac{m\pi\nu}{\hbar}$
+        \\ $E=\hbar\pi\nu$
+
+        \item $\psi=\sin(\alpha x)$
+        \\ $\cfrac{\int\psi^*\hat{H}\psi d\tau}{\int\psi^*\psi d\tau}\ge E_1$
+        \\ $\int\psi^*\hat{H}\psi d\tau=\int\psi^*\hat{T}\psi d\tau+\int\psi^*\hat{V}\psi d\tau$
+        \\ $=-\cfrac{\hbar^2}{2m}\bigintsss_{-\infty}^\infty \sin(\alpha x) \cfrac{d^2\sin{\alpha x}}{dx^2}dx +2\pi^2 \nu^2m\bigintsss_{-\infty}^\infty x^2\sin{\alpha x}dx$
+        \\ $\psi=\sin{\alpha x}$ is an invalid wavefunction because it diverges from $-\infty$ to $\infty$, which are the bounds of the quantum harmonic oscillator.  
+    \end{enumerate}
+\item Find the ground state energy of the 1D particle in a box using the variational method for each of the following test wavefunctions:
+    \begin{enumerate}
+        \item $\psi=e^{-ax^2}$
+        \\ Insolvable for the ground state energy of the 1d. Recall the bounds for particle in a box is between $0$ to $L$. Because $e^{a(0)^2}=1$. This wavefunction violates the boundary condition. 
+        \item $\psi=x^a$
+        \\ Insolvable because it violates boundary conditions because it is not $0$ at the bounds.
+    \end{enumerate}
+\item Given a Hamiltonian H with (non-degenerate) eigenvectors $\psi_k$ and eigenvalues $E_k$: $E_0<E_1<...$. Let $H'=H+K|\psi_0\rangle\langle\psi_0|$ be an auxiliary operator (K is a constant). Under which conditions you could use the variational principle and the auxiliary operator to study some
+of the excited states of H?
+
+\\ $K$ must be bigger than the gap between ground and 1st excited state because if $K>E_1-E_0$, then the ground state of $H'$ is the first excited state of $H$.
+\item $H=\frac{p_x^2}{2m}+ax+\frac{bx^2}{2}+\frac{c}{6}x^3$. use perturbation theory to provide the best estimate (up to 1st order) of the energy of its 2nd excited
+state.
+\\ The perturbation is $V=ax+\frac{c}{6}x^3$ because the other two terms can be separated into the $\hat{H}$ for harmonic oscillator.
+\\ $\lambda=1$ for first order correction. 
+\\ $E=E_0^2+\bigint_{-\infty}^{\infty}\psi*(ax+\frac{c}{6}x^3)\psi$
+\\ $E=\hbar\omega(n+\frac{1}{2})+0$ because odd functions in the integral part. 
+\\ $E=\hbar\omega(2+\frac{1}{2})=\frac{5}{2}\hbar\omega$ Energy from first order perturbation for the 2nd excited state is the same as 2nd excited state for the harmonic oscillator. 
+\item Let h be the Hamiltonian of a single fermion, with normalized eigenfunctions {φk}. Show
+that the Slater determinant:
+\\ \begin{math}
+    \begin{bmatrix}
+    \psi_1(1) & \psi_1(2) & \hdots & \psi_1(n) \\
+    \psi_2(1) & \psi_2(2) & ... & \psi_2(n) \\ 
+    \vdots & \vdots & \ddots & \vdots \\
+    \psi_n(1) & \psi_n(2) & \hdots & \psi_n(n) \\ 
+    \end{bmatrix}
+    \end{math}
+\\ $\hat{H}= h1+h2+...+h_N$
+\\ To prove that there will it will normalize to $\frac{1}{N!}$, we know there are N! terms in the slater determinant of the $n \times n$ matrix. Different spin state will be orthogonal. So it will be $\frac{1}{\sqrt{N!}}$
+\end{enumerate}%ends the numbering
+
+\end{document}
